@@ -41,20 +41,49 @@ function App() {
         </div>
         <div className="graph-and-cam-container">
           <div className="graph">
-            <LineChart
-              dataArray={currentData}
-              labels={currentLabel}
-            ></LineChart>
-            {useEffect(() => {
-              const idetifier = setTimeout(() => {
-                dataChangeHandler();
-                labelChangeHandler();
-              }, 1000);
-              return () => {
-                clearTimeout(idetifier);
-              };
-            }, [currentData])}
+            <div className="graph2">
+              <LineChart label="temperature"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+              <LineChart label="pressure"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+            </div>
+
+            <div className="graph2">
+              <LineChart label="battery voltage"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+              <LineChart label="revolution"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+            </div>
+
+            <div className="graph2">
+              <LineChart label="altitude"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+              <LineChart label="speed"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+            </div>
           </div>
+          {useEffect(() => {
+            const idetifier = setTimeout(() => {
+              dataChangeHandler();
+              labelChangeHandler();
+            }, 1000);
+            return () => {
+              clearTimeout(idetifier);
+            };
+          }, [currentData])}
+
           <div className="cam-container">
             <Cam />
           </div>

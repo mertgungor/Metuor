@@ -4,13 +4,13 @@ import { Line } from "react-chartjs-2";
 
 const LineChart = (props) => {
   return (
-    <div>
+    <div className="linechart-container">
       <Line
         data={{
           labels: props.labels,
           datasets: [
             {
-              label: "speed",
+              label: props.label,
               data: props.dataArray,
             },
           ],
