@@ -24,7 +24,7 @@ const mapContainerStyle = {
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "yourkey",
+    googleMapsApiKey: "AIzaSyBNNENMwan9zGpl2xWnj6Hi4I-0wy6aBhs",
   });
 
   if (loadError) return "Error";

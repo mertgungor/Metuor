@@ -5,6 +5,8 @@ import Cam from "./components/Cam/Cam";
 import TelemData from "./components/TelemData/TelemData";
 import Map from "./components/Map/Map";
 import LineChart from "./components/LineChart/LineChart";
+import { Earth } from "./components/earth";
+import Cube from "./components/Cube/Cube";
 
 function App() {
   const [currentData, setCurrentData] = useState([0.1, 0.2, 0.1, 0.2, 0.1]);
@@ -34,7 +36,9 @@ function App() {
           <div className="card">
             <TelemData />
           </div>
-          <div className="card">3d</div>
+          <div className="card">
+            <Earth></Earth>
+          </div>
           <div className="card">
             <Map />
           </div>
@@ -42,33 +46,39 @@ function App() {
         <div className="graph-and-cam-container">
           <div className="graph">
             <div className="graph2">
-              <LineChart label="temperature"
+              <LineChart
+                label="temperature"
                 dataArray={currentData}
                 labels={currentLabel}
               ></LineChart>
-              <LineChart label="pressure"
-                dataArray={currentData}
-                labels={currentLabel}
-              ></LineChart>
-            </div>
-
-            <div className="graph2">
-              <LineChart label="battery voltage"
-                dataArray={currentData}
-                labels={currentLabel}
-              ></LineChart>
-              <LineChart label="revolution"
+              <LineChart
+                label="pressure"
                 dataArray={currentData}
                 labels={currentLabel}
               ></LineChart>
             </div>
 
             <div className="graph2">
-              <LineChart label="altitude"
+              <LineChart
+                label="battery voltage"
                 dataArray={currentData}
                 labels={currentLabel}
               ></LineChart>
-              <LineChart label="speed"
+              <LineChart
+                label="revolution"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+            </div>
+
+            <div className="graph2">
+              <LineChart
+                label="altitude"
+                dataArray={currentData}
+                labels={currentLabel}
+              ></LineChart>
+              <LineChart
+                label="speed"
                 dataArray={currentData}
                 labels={currentLabel}
               ></LineChart>
