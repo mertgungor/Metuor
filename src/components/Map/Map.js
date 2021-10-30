@@ -3,7 +3,6 @@ import {
   GoogleMap,
   useLoadScript,
   Marker,
-  InfoWindow,
 } from "@react-google-maps/api";
 
 const center = {
@@ -14,7 +13,7 @@ const options = {
   disableDefaultUI: true,
   zoomControl: true,
 };
-const libraries = ["places"];
+//const libraries = ["places"];
 const mapContainerStyle = {
   height: "90%",
   width: "90%",
